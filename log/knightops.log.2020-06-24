@@ -1,0 +1,9 @@
+2020-06-24 18:02:45,677 INFO main.py[ln:397] Started server process [52492]
+2020-06-24 18:02:45,679 INFO on.py[ln:22] Waiting for application startup.
+2020-06-24 18:02:45,688 INFO on.py[ln:34] Application startup complete.
+2020-06-24 18:03:51,783 INFO h11_impl.py[ln:454] 127.0.0.1:61525 - "GET /docs HTTP/1.1" 200
+2020-06-24 18:03:52,524 INFO h11_impl.py[ln:454] 127.0.0.1:61525 - "GET /openapi.json HTTP/1.1" 200
+2020-06-24 18:04:00,624 INFO h11_impl.py[ln:454] 127.0.0.1:61538 - "GET /docs HTTP/1.1" 200
+2020-06-24 18:04:00,979 INFO h11_impl.py[ln:454] 127.0.0.1:61538 - "GET /openapi.json HTTP/1.1" 200
+2020-06-24 18:04:01,600 INFO h11_impl.py[ln:454] 127.0.0.1:61538 - "GET /docs HTTP/1.1" 200
+2020-06-24 18:04:01,708 INFO h11_impl.py[ln:454] 127.0.0.1:61538 - "GET /openapi.json HTTP/1.1" 200

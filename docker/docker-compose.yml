@@ -1,0 +1,9 @@
+validate:
+    image: xxx/fast-api1.0_base20200409:v1.0
+    ports:
+        - "3060:3060"
+    volumes:
+        - ../../knightops/:/root/www/knightops/
+    environment:
+      - ENV_STATUS=test
+    command: ["bash", "-c", "sh /root/www/knightops/docker/start.sh"]
