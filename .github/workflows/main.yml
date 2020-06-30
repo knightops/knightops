@@ -24,7 +24,7 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.1.2
       env:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }} 
-          ARGS: "-avzr --delete --exclude venv"
+          ARGS: "-rl --exclude venv"
           SOURCE: ""
           TARGET: "/usr/local/knightops/"
           REMOTE_PORT: ${{ secrets.DEPLOY_HOST_PORT }}
