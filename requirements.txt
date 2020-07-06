@@ -12,3 +12,4 @@ fastapi-utils
 async-exit-stack
 async-generator
 alembic
+python-dotenv
