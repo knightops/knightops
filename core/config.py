@@ -55,7 +55,6 @@ class Settings(BaseSettings):
     EMAIL_RESET_TOKEN_EXPIRE_HOURS: int = 48
     EMAIL_TEMPLATES_DIR: str = "/app/app/email-templates/build"
     EMAILS_ENABLED: bool = False
-    print(1111111111)
 
     @validator("EMAILS_ENABLED", pre=True)
     def get_emails_enabled(cls, v: bool, values: Dict[str, Any]) -> bool:
@@ -69,6 +68,19 @@ class Settings(BaseSettings):
     # FIRST_SUPERUSER: EmailStr
     FIRST_SUPERUSER_PASSWORD: str
     USERS_OPEN_REGISTRATION: bool = False
+
+    CACHES = {
+        'default': {
+            'BACKEND': 'core.cache.backends.locmem.LocMemCache',
+            'TIMEOUT': 24 * 60 * 60,
+            'OPTIONS': {
+                'MAX_ENTRIES': 100
+            }
+        }
+    }
+
+    ADDONS_FOLDER: str = 'addons'
+
     @property
     def fastapi_kwargs(self) -> Dict[str, Any]:
         """
