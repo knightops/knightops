@@ -6,6 +6,8 @@ from core.addons import AddonsManager
 from core.config import settings
 from core.pagination import Pagination
 from core.response import api_return_handler, ResponseMessage
+from fastapi.responses import FileResponse
+from pathlib import Path
 
 router = InferringRouter()
 
@@ -39,4 +41,10 @@ class AddonsCBV:
     @router.get("/install/{addons_name}")
     def install(self, addons_name):
         pass
+
+    @router.get("/icon/{addons_name}/{icon_name}", response_class=FileResponse)
+    async def get_icon(self, addons_name, icon_name):
+        icon_path = Path(settings.ADDONS_FOLDER).joinpath(addons_name).joinpath(icon_name)
+        return FileResponse(str(icon_path))
+
 

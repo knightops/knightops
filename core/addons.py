@@ -14,6 +14,7 @@ class AddonsInfo(BaseModel):
     identifier: str = Field(...)
     name: str = Field(default='', title='', description='')
     title: str = Field(...)
+    icon: str
     version: str = Field('1.0')
     author: str
     intro: str

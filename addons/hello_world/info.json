@@ -4,5 +4,6 @@
     "author": "sh4nks",
     "license": "BSD",
     "intro": "A Hello World Plugin.",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "icon": "icon.png"
 }
