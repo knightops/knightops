@@ -11,7 +11,7 @@ import uvicorn
 from core.config import settings
 from core.database import Base
 
-MODELS_DIRECTORY = "app/models"
+MODELS_DIRECTORY = os.path.join('app', 'models')
 EXCLUDE_FILES = ["__init__.py"]
 
 
