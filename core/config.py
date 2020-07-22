@@ -79,6 +79,26 @@ class Settings(BaseSettings):
         }
     }
 
+    SCHEDULER = {
+        'jobstores': {
+                'default': {
+                'type': 'sqlalchemy',
+                'url': 'sqlite:///jobs.sqlite'
+                }
+        },
+        'executors': {
+            'default': {
+                'type': 'processpool',
+                'max_workers': '20'
+            },
+        },
+        'job_defaults': {
+            'coalesce': True,
+            'max_instances': 5,
+            'misfire_grace_time': 30
+        }
+    }
+
     ADDONS_FOLDER: str = 'addons'
 
     @property

@@ -13,3 +13,5 @@ async-exit-stack
 async-generator
 alembic
 python-dotenv
+apscheduler==3.6.3
+qlalchemy-utils

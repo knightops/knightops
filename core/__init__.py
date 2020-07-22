@@ -18,6 +18,7 @@ from app.utils.redis_client import RedisClient
 from fishbase.fish_logger import set_log_file
 from app.middleware.proxy_headers import ProxyHeadersMiddleware
 from core.config import settings
+from core.schedule import scheduler
 
 basedir = os.path.split(os.path.dirname(__file__))[0]
 app_config = ()
@@ -107,6 +108,7 @@ def init_log():
 
 async def startup():
     print('开始启动')
+    scheduler.start()
     pass
 
 
